@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState, Fragment} from 'react'
 
 function App() {
+
+  useEffect(() => {
+    fetch('https://enigmatic-garden-34822.herokuapp.com/http://apiadvisor.climatempo.com.br/api/v1/climate/rain/locale/3477?token=01c61743ca218f8a07f65a3b36d5578d')
+    .then((res) => res.json())
+    .then((json) => {
+      console.log(json);
+    })
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      Rodando 
     </div>
-  );
+    )
 }
 
-export default App;
+export default App

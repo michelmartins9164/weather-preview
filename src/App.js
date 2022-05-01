@@ -1,20 +1,16 @@
-import React, {useEffect, useState, Fragment} from 'react'
+import React, { useContext } from 'react';
+
+import Fprovider from './provider';
 
 function App() {
-
-  useEffect(() => {
-    fetch('https://enigmatic-garden-34822.herokuapp.com/http://apiadvisor.climatempo.com.br/api/v1/climate/rain/locale/3477?token=01c61743ca218f8a07f65a3b36d5578d')
-    .then((res) => res.json())
-    .then((json) => {
-      console.log(json);
-    })
-  },[])
-
+  console.log(Fprovider)
   return (
     <div>
-      Rodando 
+      <Fprovider>
+        
+      </Fprovider>
     </div>
-    )
+  )
 }
 
 export default App
